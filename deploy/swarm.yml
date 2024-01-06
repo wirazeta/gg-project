@@ -15,23 +15,6 @@ services:
       - ./caddy_data:/data
       - ./caddy_config:/config
   
-  # Mysql
-  # mysql:
-  #   image: mysql:8.0.26
-  #   ports:
-  #     - "3306:3306"
-  #   restart: on-failure
-  #   deploy:
-  #     mode: replicated
-  #     replicas: 1
-  #   environment:
-  #     MYSQL_ROOT_PASSWORD: root
-  #     MYSQL_DATABASE: gg_project
-  #     MYSQL_TCP_PORT: 3306
-  #   volumes:
-  #     - "./storage/mysql/scripts:/docker-entrypoint-initdb.d"
-  #     - "./storage/mysql/data:/var/lib/mysql"
-  
   # Redis
   redis:
     image: redis:6
